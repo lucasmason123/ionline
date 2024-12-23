@@ -64,6 +64,11 @@ class EndSigningProcess extends Notification
         // ];
 
         return [
+            "icon" => "heroicon-o-check-circle",
+            // "iconColor" => "green",
+            "status" => "success",
+            "title" => 'Perfil de Cargos',
+            "body" => 'El proceso de aprobación del perfil de cargo ha finalizado.',
             "actions" => [
                 [
                     "name" => "view_job_position_profile",
@@ -74,14 +79,9 @@ class EndSigningProcess extends Notification
                     "shouldOpenInNewTab" => true,
                 ],
             ],
-            "body" => 'El proceso de aprobación del perfil de cargo ha finalizado.',
-            "color" => "success",
+            // "color" => "success",
             "duration" => "persistent",
-            "icon" => "heroicon-o-check-circle",
-            "iconColor" => "green",
-            "status" => "success",
-            "title" => 'Aprobación Finalizada',
-            "view" => "filament-notifications::notification",
+            // "view" => "filament-notifications::notification",
             "format" => "filament",
         ];
     }

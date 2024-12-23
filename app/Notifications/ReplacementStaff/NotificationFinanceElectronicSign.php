@@ -64,6 +64,11 @@ class NotificationFinanceElectronicSign extends Notification
         // ];
 
         return [
+            "icon" => "heroicon-o-identification", 
+            // "iconColor" => "blue", 
+            "status" => "info", 
+            "title" => 'Solicitudes de Contratación', 
+            "body" => 'Se ha creado una nueva solicitud de firma electrónica para el reemplazo ID: '.$this->requestReplacementStaff->id,
             "actions" => [
                 [
                     "name" => "view_request",
@@ -74,17 +79,10 @@ class NotificationFinanceElectronicSign extends Notification
                     "shouldOpenInNewTab" => true, 
                 ],
             ],
-            "body" => 'Se ha creado una nueva solicitud de firma electrónica para el reemplazo ID: '.$this->requestReplacementStaff->id,
-            "color" => "info", 
+            // "color" => "info", 
             "duration" => "persistent", 
-            "icon" => "heroicon-o-identification", 
-            "iconColor" => "blue", 
-            "status" => "info", 
-            "title" => 'Firma Electrónica para Solicitud de Reemplazo', 
-            "view" => "filament-notifications::notification", 
+            // "view" => "filament-notifications::notification", 
             "format" => "filament", 
         ];
-        
-        
     }
 }

@@ -64,6 +64,11 @@ class NewAllowance extends Notification
         // ];
 
         return [
+            "icon" => "heroicon-o-wallet",
+            // "iconColor" => "blue",
+            "status" => "info",
+            "title" => 'Víaticos',
+            "body" => 'Se ha creado una nueva solicitud de viático con el ID: '.$this->allowance->id,
             "actions" => [
                 [
                     "name" => "view_allowance",
@@ -74,14 +79,9 @@ class NewAllowance extends Notification
                     "shouldOpenInNewTab" => true,
                 ],
             ],
-            "body" => 'Se ha creado una nueva solicitud de viático con el ID: '.$this->allowance->id,
-            "color" => "info",
+            // "color" => "info",
             "duration" => "persistent",
-            "icon" => "heroicon-o-wallet",
-            "iconColor" => "blue",
-            "status" => "info",
-            "title" => 'Nueva Solicitud de Viático',
-            "view" => "filament-notifications::notification",
+            // "view" => "filament-notifications::notification",
             "format" => "filament",
         ];
         

@@ -57,34 +57,34 @@ class NewApproval extends Notification
      */
     public function toArray($notifiable)
     {
-        // return [
-        //     'module'  => $this->approval->module,
-        //     'icon'    => '<i class="fa-fw '.$this->approval->module_icon.'"></i>', 
-        //     'subject' => $this->approval->subject,
-        //     'action' => route('documents.approvals',[$this->approval->id], false),
-        // ];
-
         return [
-            "actions" => [
-                [
-                    "name" => "view_approval", 
-                    "label" => "Ver Aprobación", 
-                    "url" => route('documents.approvals', [$this->approval->id], false), 
-                    "color" => "primary", 
-                    "icon" => "heroicon-o-document", 
-                    "shouldOpenInNewTab" => true, 
-                ],
-            ],
-            "body" => "El usuario ".auth()->user()->name." le recuerda revisar la aprobación con ID ".$this->approval->id, 
-            "color" => "info", 
-            "duration" => "persistent", 
-            "icon" => "heroicon-o-identification",
-            "iconColor" => "blue", 
-            "status" => "info", 
-            "title" => "Nueva Aprobación", 
-            "view" => "filament-notifications::notification", 
-            "format" => "filament", 
+            'module'  => $this->approval->module,
+            'icon'    => '<i class="fa-fw '.$this->approval->module_icon.'"></i>', 
+            'subject' => $this->approval->subject,
+            'action' => route('documents.approvals',[$this->approval->id], false),
         ];
-        
+
+        // return [
+        //     "icon" => "heroicon-o-identification",
+        //     // "iconColor" => "blue", 
+        //     "status" => "info", 
+        //     'title' => $data['module'] ?? 'Notificación',
+        //     "body" => "El usuario ".auth()->user()->name." le recuerda revisar la aprobación con ID ".$this->approval->id, 
+        //     "actions" => [
+        //         [
+        //             "name" => "view_approval", 
+        //             "label" => "Ver Aprobación", 
+        //             "url" => route('documents.approvals', [$this->approval->id], false), 
+        //             "color" => "primary", 
+        //             "icon" => "heroicon-o-document", 
+        //             "shouldOpenInNewTab" => true, 
+        //         ],
+        //     ],
+
+        //     // "color" => "info", 
+        //     "duration" => "persistent", 
+        //     // "view" => "filament-notifications::notification", 
+        //     "format" => "filament", 
+        // ];
     }
 }

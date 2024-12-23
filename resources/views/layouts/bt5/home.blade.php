@@ -292,8 +292,8 @@
                     @foreach (auth()->user()->unreadNotifications->where('type', '!=', 'Filament\Notifications\DatabaseNotification')->take(7) as $notification)
                         <a href="{{ route('openNotification', $notification) }}"
                             class="list-group-item list-group-item-action small">
-                            {{ $notification->created_at }} -
-                            {!! $notification->data['icon'] ?? null !!}
+                            {{ $notification->created_at }} -                         
+                            <i class="{!! $notification->data['icon'] ?? null !!}"></i>
                             <b>{{ $notification->data['module'] ?? '' }}</b>
                             {{-- Manejo flexible para mostrar 'subject' o 'body' --}}
                             @if(array_key_exists('subject', $notification->data))

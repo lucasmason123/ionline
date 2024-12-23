@@ -60,6 +60,11 @@ class NewNoAttendanceRecord extends Notification
         // ];
 
         return [
+            "icon" => "heroicon-o-clock",
+            // "iconColor" => "blue",
+            "status" => "info",
+            "title" => 'Asistencia',
+            "body" => 'Constancia de marca de ' . $this->noAttendanceRecord->user->tinnyName,
             "actions" => [
                 [
                     "name" => "confirm_attendance",
@@ -70,17 +75,10 @@ class NewNoAttendanceRecord extends Notification
                     "shouldOpenInNewTab" => false,
                 ],
             ],
-            "body" => 'Constancia de marca de ' . $this->noAttendanceRecord->user->tinnyName,
-            "color" => "warning",
+            // "color" => "warning",
             "duration" => "persistent",
-            "icon" => "heroicon-o-clock",
-            "iconColor" => "blue",
-            "status" => "info",
-            "title" => 'Nueva Constancia de Marca',
-            "view" => "filament-notifications::notification",
+            // "view" => "filament-notifications::notification",
             "format" => "filament",
         ];
-        
-
     }
 }

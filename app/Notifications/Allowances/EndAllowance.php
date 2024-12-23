@@ -13,6 +13,8 @@ class EndAllowance extends Notification
 {
     use Queueable;
 
+    protected $allowance;
+
     /**
      * Create a new notification instance.
      *
@@ -64,6 +66,11 @@ class EndAllowance extends Notification
         // ];
 
         return [
+            "icon" => 'heroicon-o-wallet', 
+            // "iconColor" => "green", 
+            "status" => "success", 
+            "title" => 'Víaticos', 
+            "body" => 'Se ha aprobado la solicitud de viático ID: '.$this->allowance->id,
             "actions" => [
                 [
                     "name" => "view_allowance_details",
@@ -74,17 +81,10 @@ class EndAllowance extends Notification
                     "shouldOpenInNewTab" => true, 
                 ],
             ],
-            "body" => 'Se ha aprobado la solicitud de viático ID: '.$this->allowance->id,
-            "color" => "success", 
+            // "color" => "success", 
             "duration" => "persistent", 
-            "icon" => '<i class="fas fa-fw fa-wallet"></i>', 
-            "iconColor" => "green", 
-            "status" => "success", 
-            "title" => 'Aprobación de Solicitud de Viático', 
-            "view" => "filament-notifications::notification", 
+            // "view" => "filament-notifications::notification", 
             "format" => "filament", 
         ];
-        
-        
     }
 }

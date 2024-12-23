@@ -72,6 +72,11 @@ class ResponseDoubt extends Notification
         // ];
 
         return [
+            'icon' => 'heroicon-o-question-mark-circle',
+            // "iconColor" => "blue", 
+            "status" => "info", 
+            "title" => 'Amipass Consulta', 
+            "body" => 'Han Respondido su Consulta/Sugerencia Amipass Nº: '.$this->param,
             "actions" => [
                 [
                     "name" => "view_amipass_question",
@@ -82,16 +87,10 @@ class ResponseDoubt extends Notification
                     "shouldOpenInNewTab" => true, 
                 ],
             ],
-            "body" => 'Han Respondido su Consulta/Sugerencia Amipass Nº: '.$this->param,
-            "color" => "info", 
+            // "color" => "info", 
             "duration" => "persistent", 
-            "icon" => '<i class="fas fa-fw fa-question-circle"></i>', 
-            "iconColor" => "blue", 
-            "status" => "info", 
-            "title" => 'Respuesta a Consulta Amipass', 
-            "view" => "filament-notifications::notification", 
+            // "view" => "filament-notifications::notification", 
             "format" => "filament", 
         ];
-        
     }
 }

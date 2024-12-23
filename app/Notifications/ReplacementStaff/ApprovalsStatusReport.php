@@ -62,6 +62,11 @@ class ApprovalsStatusReport extends Notification
         // ];
 
         return [
+            "icon" => "heroicon-o-identification",
+            // "iconColor" => "blue",
+            "status" => "info",
+            "title" => 'Solicitudes de Contratatación',
+            "body" => 'Estimado Usuario, favor dirigirse al módulo Solicitudes de Aprobación. <br>' . $this->pendingsCount . ' solicitudes en espera.',
             "actions" => [
                 [
                     "name" => "go_to_approvals",
@@ -72,16 +77,10 @@ class ApprovalsStatusReport extends Notification
                     "shouldOpenInNewTab" => false, 
                 ],
             ],
-            "body" => 'Estimado Usuario, favor dirigirse al módulo Solicitudes de Aprobación. <br>' . $this->pendingsCount . ' solicitudes en espera.',
-            "color" => "info",
+            // "color" => "info",
             "duration" => "persistent",
-            "icon" => "heroicon-o-identification",
-            "iconColor" => "blue",
-            "status" => "info",
-            "title" => 'Solicitudes de Aprobación Pendientes',
-            "view" => "filament-notifications::notification",
+            // "view" => "filament-notifications::notification",
             "format" => "filament",
         ];
-        
     }
 }

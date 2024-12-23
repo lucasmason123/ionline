@@ -42,7 +42,7 @@ class ReportByOrganizationalUnit extends Page implements Tables\Contracts\HasTab
             $unitIdMap = [
                 'subdir_gestion_asistencial' => Parameter::get('ou', 'SubSDGA', Auth::user()->establishment_id),
                 'subdir_desarrollo_personas' => Parameter::get('ou', 'SubRRHH', Auth::user()->establishment_id),
-                'subdir_recursos_fisicos' => Parameter::get('ou', 'SDASSI', Auth::user()->establishment_id )
+                'subdir_recursos_fisicos' => Parameter::get('ou', 'SDASSI', Auth::user()->establishment_id)
             ];
 
             $unitId = $unitIdMap[$this->activeTab];
@@ -77,6 +77,16 @@ class ReportByOrganizationalUnit extends Page implements Tables\Contracts\HasTab
                 Tables\Columns\TextColumn::make('job_position_profiles_count')
                     ->label('Cantidad de Perfiles de Cargo')
                     ->sortable(),
+                Tables\Columns\TextColumn::make('actions')
+                    ->label('Acciones')
+                    ->formatStateUsing(function ($state, $record) {
+                        if ($record->job_position_profiles_count > 0) {
+                            $url = route('filament.resources.job-position-profile-resource.pages.organizational-unit-profiles', ['unit' => $record->id]);
+                            return "<a href='{$url}' class='text-primary underline'>Ver Perfiles</a>";
+                        }
+                        return '-';
+                    })
+                    ->html(),
             ])
             ->paginated(false);
     }

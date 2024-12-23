@@ -79,6 +79,10 @@ class DteConfirmation extends Notification
 
         if ($this->dte->folio_oc) {
             return [
+                "icon" => 'heroicon-s-document-currency-dollar',
+                "status" => "info",
+                "title" => 'Finanzas',
+                "body" => 'Haz clic para crear una recepción de la DTE con el folio OC: ' . $this->dte->folio_oc . '.', 
                 "actions" => [
                     [
                         "name" => "create_reception_with_oc",
@@ -89,17 +93,17 @@ class DteConfirmation extends Notification
                         "shouldOpenInNewTab" => true,
                     ],
                 ],
-                "body" => 'Haz clic para crear una recepción de la DTE con el folio OC: ' . $this->dte->folio_oc . '.', 
-                "color" => "info",
+                // "color" => "info",
                 "duration" => "persistent",
-                "icon" => 'heroicon-s-document-currency-dollar',
-                "status" => "info",
-                "title" => 'Nueva DTE para recepcionar',
-                "view" => "filament-notifications::notification",
+                // "view" => "filament-notifications::notification",
                 "format" => "filament",
             ];
         } else {
             return [
+                "icon" => 'heroicon-s-document-currency-dollar',
+                "status" => "info",
+                "title" => 'Finanzas',
+                "body" => 'Haz clic para crear una recepción de la DTE sin el folio OC.',
                 "actions" => [
                     [
                         "name" => "create_reception_without_oc",
@@ -110,13 +114,9 @@ class DteConfirmation extends Notification
                         "shouldOpenInNewTab" => true,
                     ],
                 ],
-                "body" => 'Haz clic para crear una recepción de la DTE sin el folio OC.',
-                "color" => "info",
+                // "color" => "info",
                 "duration" => "persistent",
-                "icon" => 'heroicon-s-document-currency-dollar',
-                "status" => "info",
-                "title" => 'Nueva DTE para recepcionar',
-                "view" => "filament-notifications::notification",
+                // "view" => "filament-notifications::notification",
                 "format" => "filament",
             ];
         }

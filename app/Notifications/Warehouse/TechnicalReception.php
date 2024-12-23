@@ -61,6 +61,11 @@ class TechnicalReception extends Notification
         // ];
 
         return [
+            "icon" => "heroicon-o-inbox",
+            // "iconColor" => "blue",
+            "status" => "info", //Color del icono
+            "title" => 'Firma Pendiente',
+            "body" => 'Firma pendiente de ' . $this->subject,
             "actions" => [
                 [
                     "name" => "sign_document",
@@ -70,15 +75,10 @@ class TechnicalReception extends Notification
                     "icon" => "heroicon-o-pencil",
                     "shouldOpenInNewTab" => false,
                 ],
-            ],
-            "body" => 'Firma pendiente de ' . $this->subject,
-            "color" => "warning",
+            ],     
+            // "color" => "warning",
             "duration" => "persistent",
-            "icon" => "heroicon-o-inbox",
-            "iconColor" => "blue",
-            "status" => "info",
-            "title" => 'Firma Pendiente',
-            "view" => "filament-notifications::notification",
+            // "view" => "filament-notifications::notification",
             "format" => "filament",
         ];
     }

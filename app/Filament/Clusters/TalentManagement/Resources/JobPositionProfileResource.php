@@ -11,8 +11,10 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Filament\Pages\SubNavigationPosition;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+
 
 class JobPositionProfileResource extends Resource
 {
@@ -21,6 +23,9 @@ class JobPositionProfileResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     protected static ?string $cluster = TalentManagement::class;
+
+    protected static SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
+ 
 
     public static function form(Form $form): Form
     {
@@ -149,6 +154,7 @@ class JobPositionProfileResource extends Resource
             'create' => Pages\CreateJobPositionProfile::route('/create'),
             'edit' => Pages\EditJobPositionProfile::route('/{record}/edit'),
             'report-by-organizational-unit' => Pages\ReportByOrganizationalUnit::route('/report-by-organizational-unit'),
+            // 'organizational-unit-profiles' => Pages\OrganizationalUnitProfilesPage::route('/organizational-unit-profiles/{unitId?}'),
         ];
     }
 }

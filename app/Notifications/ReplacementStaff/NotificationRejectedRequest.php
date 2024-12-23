@@ -73,6 +73,11 @@ class NotificationRejectedRequest extends Notification
 
         
         return [
+            "icon" => "heroicon-o-x-circle",
+            // "iconColor" => "red", 
+            "status" => "error", 
+            "title" => "Solicitudes de Contratación", 
+            "body" => "Se ha rechazado la solicitud ID: {$this->requestReplacementStaff->id}. Haz clic en el botón para más información.", 
             "actions" => [
                 [
                     "name" => "view_request",
@@ -83,14 +88,9 @@ class NotificationRejectedRequest extends Notification
                     "shouldOpenInNewTab" => false, 
                 ],
             ],
-            "body" => "Se ha rechazado la solicitud ID: {$this->requestReplacementStaff->id}. Haz clic en el botón para más información.", 
-            "color" => "danger", 
+            // "color" => "danger", 
             "duration" => "persistent", 
-            "icon" => "heroicon-o-x-circle",
-            "iconColor" => "red", 
-            "status" => "error", 
-            "title" => "Solicitud Rechazada", 
-            "view" => "filament-notifications::notification", 
+            // "view" => "filament-notifications::notification", 
             "format" => "filament", 
         ];
         

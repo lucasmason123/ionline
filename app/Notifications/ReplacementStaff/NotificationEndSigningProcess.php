@@ -64,6 +64,11 @@ class NotificationEndSigningProcess extends Notification
         // ];
 
         return [
+            "icon" => "heroicon-o-identification",  
+            // "iconColor" => "blue",  
+            "status" => "info",  
+            "title" => 'Solicitudes de Contratación',
+            "body" => 'El proceso de firma para la solicitud de reemplazo ID: '.$this->requestReplacementStaff->id.' ha finalizado.',
             "actions" => [
                 [
                     "name" => "view_replacement_request",
@@ -74,14 +79,9 @@ class NotificationEndSigningProcess extends Notification
                     "shouldOpenInNewTab" => true, 
                 ],
             ],
-            "body" => 'El proceso de firma para la solicitud de reemplazo ID: '.$this->requestReplacementStaff->id.' ha finalizado.',
-            "color" => "info",  
+            // "color" => "info",  
             "duration" => "persistent",  
-            "icon" => "heroicon-o-identification",  
-            "iconColor" => "blue",  
-            "status" => "info",  
-            "title" => 'Fin de Proceso de Firma',
-            "view" => "filament-notifications::notification", 
+            // "view" => "filament-notifications::notification", 
             "format" => "filament", 
         ];
         

@@ -64,6 +64,11 @@ class Sign extends Notification
         // ];
 
         return [
+            "icon" => "heroicon-o-user-circle",
+            // "iconColor" => "blue", 
+            "status" => "info", 
+            "title" => 'Perfil de Cargos', 
+            "body" => 'Se ha creado un nuevo perfil de cargo para aprobación. Revisa los detalles y realiza las acciones correspondientes.', 
             "actions" => [
                 [
                     "name" => "approve_job_position_profile",
@@ -74,16 +79,10 @@ class Sign extends Notification
                     "shouldOpenInNewTab" => true, 
                 ],
             ],
-            "body" => 'Se ha creado un nuevo perfil de cargo para aprobación. Revisa los detalles y realiza las acciones correspondientes.', 
-            "color" => "info", 
+            // "color" => "info", 
             "duration" => "persistent", 
-            "icon" => "heroicon-o-user-circle",
-            "iconColor" => "blue", 
-            "status" => "info", 
-            "title" => 'Nuevo Perfil de Cargo para Aprobación', 
-            "view" => "filament-notifications::notification", 
+            // "view" => "filament-notifications::notification", 
             "format" => "filament", 
         ];
-        
     }
 }

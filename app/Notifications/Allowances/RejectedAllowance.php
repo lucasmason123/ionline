@@ -64,6 +64,11 @@ class RejectedAllowance extends Notification
         // ];
 
         return [
+            "icon" => "heroicon-o-wallet",
+            // "iconColor" => "red", 
+            "status" => "danger", 
+            "title" => 'Víaticos', 
+            "body" => 'Se ha rechazado la solicitud de viático ID: '.$this->allowance->id,
             "actions" => [
                 [
                     "name" => "view_allowance_details",
@@ -74,17 +79,10 @@ class RejectedAllowance extends Notification
                     "shouldOpenInNewTab" => true, 
                 ],
             ],
-            "body" => 'Se ha rechazado la solicitud de viático ID: '.$this->allowance->id,
-            "color" => "danger", 
+            // "color" => "danger", 
             "duration" => "persistent", 
-            "icon" => '<i class="fas fa-fw fa-wallet"></i>', 
-            "iconColor" => "red", 
-            "status" => "danger", 
-            "title" => 'Rechazo de Solicitud de Viático', 
-            "view" => "filament-notifications::notification", 
+            // "view" => "filament-notifications::notification", 
             "format" => "filament", 
         ];
-        
-        
     }
 }

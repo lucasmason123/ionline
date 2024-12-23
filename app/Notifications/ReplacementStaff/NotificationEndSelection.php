@@ -72,6 +72,11 @@ class NotificationEndSelection extends Notification
         // ];
 
         return [
+            "icon" => "heroicon-o-identification",
+            "iconColor" => "green", 
+            "status" => "success", 
+            "title" => 'Solicitudes de Contratación',
+            "body" => 'Se ha finalizado el proceso de selección para la solicitud ID: ' . $this->requestReplacementStaff->id,
             "actions" => [
                 [
                     "name" => "view_request",
@@ -82,16 +87,10 @@ class NotificationEndSelection extends Notification
                     "shouldOpenInNewTab" => false, 
                 ],
             ],
-            "body" => 'Se ha finalizado el proceso de selección para la solicitud ID: ' . $this->requestReplacementStaff->id,
-            "color" => "success", 
+            // "color" => "success", 
             "duration" => "persistent", 
-            "icon" => "heroicon-o-identification",
-            "iconColor" => "green", 
-            "status" => "success", 
-            "title" => 'Proceso de selección finalizado',
-            "view" => "filament-notifications::notification", 
+            // "view" => "filament-notifications::notification", 
             "format" => "filament", 
         ];
-        
     }
 }

@@ -72,6 +72,11 @@ class NotificationNewRequest extends Notification
         // ];
 
         return [
+            "icon" => "heroicon-o-identification",
+            // "iconColor" => "blue",
+            "status" => "info",
+            "title" => "Solicitudes de Contratación",
+            "body" => "Se ha creado una nueva solicitud ID: {$this->requestReplacementStaff->id}.",
             "actions" => [
                 [
                     "name" => "view_request",
@@ -82,16 +87,10 @@ class NotificationNewRequest extends Notification
                     "shouldOpenInNewTab" => false,
                 ],
             ],
-            "body" => "Se ha creado una nueva solicitud ID: {$this->requestReplacementStaff->id}.",
-            "color" => "info",
+            // "color" => "info",
             "duration" => "persistent",
-            "icon" => "heroicon-o-identification",
-            "iconColor" => "blue",
-            "status" => "info",
-            "title" => "Nueva Solicitud de Contratación",
-            "view" => "filament-notifications::notification",
+            // "view" => "filament-notifications::notification",
             "format" => "filament",
         ];
-        
     }
 }

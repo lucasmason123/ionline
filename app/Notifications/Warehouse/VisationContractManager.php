@@ -65,6 +65,11 @@ class VisationContractManager extends Notification
         // ];
 
         return [
+            "icon" => "heroicon-o-question-mark-circle", 
+            // "iconColor" => "blue", 
+            "status" => "info", 
+            "title" => 'Visaciones Pendientes', 
+            "body" => 'Tiene una nueva solicitud de visación por parte de bodega para su formulario de requerimiento. Por favor acceda .', 
             "actions" => [
                 [
                     "name" => "view_pending_visations",
@@ -75,14 +80,9 @@ class VisationContractManager extends Notification
                     "shouldOpenInNewTab" => false, 
                 ],
             ],
-            "body" => 'Tiene una nueva solicitud de visación por parte de bodega para su formulario de requerimiento. Por favor acceda .', 
-            "color" => "info", 
+            // "color" => "info", 
             "duration" => "persistent", 
-            "icon" => "heroicon-o-question-mark-circle", 
-            "iconColor" => "blue", 
-            "status" => "info", 
-            "title" => 'Visaciones Pendientes', 
-            "view" => "filament-notifications::notification", 
+            // "view" => "filament-notifications::notification", 
             "format" => "filament", 
         ];
         

@@ -44,9 +44,10 @@
         @yield('custom_css')
 
         <!-- Bootstrap icons -->
-        <link 
+        <!-- <link 
             rel="stylesheet" 
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"> -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
         <!-- Place your kit's code here -->
         <script 
