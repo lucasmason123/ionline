@@ -40,7 +40,7 @@ class UpdateNotificationsToFilamentFormat extends Command
                 continue;
             }
 
-            // Mapeo de FontAwesome a Heroicons
+            // Mapeo de FontAwesome a Heroicons.
             $iconMapping = [
                 '<i class="fas fa-wallet"></i>' => 'bi-wallet',
                 '<i class="fas fa-question-circle"></i>' => 'bi-question-circle',
